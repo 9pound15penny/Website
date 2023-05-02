@@ -1,162 +1,129 @@
-
-    ...
-    
-    <link rel="stylesheet" href="D:\vs\daima\wangye\.git\shouye.css" type="text/css" media="all ">
-    ...
-    </head>
-<div class="header">
-    <h1>程序猿的CET-6御用网站</h1>
-    <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8"> 
-
-</head>
-
-
-</html>
-    <!-- <p>创建一个页面。</p> -->
-  </div>
-
-   
-  <div class="row">
-    <div class="side">
-        <h3><a href="https://www.ximalaya.com/waiyu/40550410/">听力原文</a></h3>
-        <br>
-        <h3><a href="https://www.ximalaya.com/waiyu/40550410/">真题</a></h3>
-        <br>
-        <h3><a href="https://www.ximalaya.com/waiyu/40550410/">答案</a></h3>
-    </div>
-    <div class="main">
-        <!DOCTYPE html>
-<html>
-<head> 
-<meta charset="utf-8"> 
-<title>六级攻略</title> 
-
-
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>不知道学什么？点点试试</title>
-    <style>
-        
-        div,button{margin:0px;padding:0px;}
-        #interface{
-            font-size: 1000px;
-            width: 500px;
-            height: 300px;
-            background-color: rgb(233, 232, 232);
-            border-radius: 10%;
-            text-align: center;
-            position: relative;
-             
-        }
+<html>
+    <head>
+        <div class="header"> 
+            <h1>程序猿的CET-6御用网站</h1>
+        </div>
+        <title>六级攻略</title> 
+        <meta charset="utf-8"> 
+        <link rel="stylesheet" type="text/css" href="shouye.css">
+    </head>
 
-        #nameDisplay{
-            /*大小，形状*/
-            width: 400px;
-            height:100px;
-            /*位置*/
-            position: absolute;
-            top:50px;
-            left: 50px;
-            /*文本设置*/
-            font-size: 30px;
-            text-align: center;
-            line-height: 100px;
-
-            overflow: hidden;
-        }
-
-        button{
-            width:100px;
-            height:50px;
-            border-radius: 10%;
-            background-color: rgb(176, 249, 243);
-
-            position: absolute;
-            bottom: 50px;
-            left:200px;
-
-            font-size: 20px;
-            text-align: center;
-            line-height: 50px;
-
-        }
-    </style>
-
-</head>
-<body>
-    <div id="interface">
-        <div id="nameDisplay">今天适合做...</div>
-        <button onclick="clickButton(this)">开始</button>
+    <body>
+    <div class="navbar">
+        <a href="https://www.ximalaya.com/waiyu/40550410/">历年真题</a>
+        <a href="https://zhuanlan.zhihu.com/p/373838769">考前必备</a>
+        <a href="https://word.iciba.com/?action=courses&classid=12">高频词汇</a>
+        <a href="https://www.ximalaya.com/waiyu/40550410/">必刷题型</a>
+        <a href="https://search.bilibili.com/all?keyword=%E5%8A%9D%E5%AD%A6&from_source=webtop_search&spm_id_from=333.1007&search_source=5">劝学频道</a>
     </div>
-  <div class="navbar">
-    <a href="https://www.ximalaya.com/waiyu/40550410/">历年真题</a>
-    <a href="https://zhuanlan.zhihu.com/p/373838769">考前必备</a>
-    <a href="https://word.iciba.com/?action=courses&classid=12">高频词汇</a>
-    <a href="https://www.ximalaya.com/waiyu/40550410/">必刷题型</a>
-    <a href="https://search.bilibili.com/all?keyword=%E5%8A%9D%E5%AD%A6&from_source=webtop_search&spm_id_from=333.1007&search_source=5">劝学频道</a>
-  </div>
-</body>
-<script>
-    var names=["听听力","练阅读","做完型","攻翻译","背单词","万事皆宜","做真题","休息一下"];
-    var length=names.length;
 
-    //获取显示姓名的div对象
-    var displayBoard=document.getElementById("nameDisplay");
+    <div class="row">
+        <div class="side">
+            <h3><a href="https://www.ximalaya.com/waiyu/40550410/">听力原文</a></h3>
+            <br>
+            <h3><a href="https://www.ximalaya.com/waiyu/40550410/">真题</a></h3>
+            <br>
+            <h3><a href="https://www.ximalaya.com/waiyu/40550410/">答案</a></h3>
+        </div>
 
-    mytime = null
-
-    //点击开始，按钮变成停止字样、改变颜色，轮放姓名，点击停止，按钮变字和颜色，停止
-    function clickButton(btn){
-        //获取按钮上的文字
-        var text=btn.innerHTML;
-        console.log(text);
-        
-        //如果是开始按钮
-        if(text=="开始"){
-            btn.innerHTML="STOP!";
-            btn.style.backgroundColor="yellow";
-
-            if(mytime == null){
-                mytime = setInterval(function(){
-                    var name=randomName();
-                    console.log(name);
-                    //轮放名字
-                    displayBoard.innerHTML=name;
-                }, 50);
+        <div class="main">
+        <style>
+            div,button{margin:0px;padding:0px;}
+            #interface{
+                font-size: 1000px;
+                width: 500px;
+                height: 300px;
+                background-color: rgb(233, 232, 232);
+                border-radius: 10%;
+                text-align: center;
+                position: relative;
             }
 
-        }else if(text=="STOP!"){
-            btn.innerHTML="开始";
-            btn.style.backgroundColor="palegreen";
+            #nameDisplay{
+                /*大小，形状*/
+                width: 400px;
+                height:100px;
+                /*位置*/
+                position: absolute;
+                top:50px;
+                left: 50px;
+                /*文本设置*/
+                font-size: 30px;
+                text-align: center;
+                line-height: 100px;
+
+                overflow: hidden;
+            }
+
+            button{
+                width:100px;
+                height:50px;
+                border-radius: 10%;
+                background-color: rgb(176, 249, 243);
+
+                position: absolute;
+                bottom: 50px;
+                left:200px;
+
+                font-size: 20px;
+                text-align: center;
+                line-height: 50px;
+
+            }
+        </style>
+
+        <div id="interface">
+            <div id="nameDisplay">今天适合做...</div>
+            <button onclick="clickButton(this)">开始</button>
+        </div>
+    <script>
+        var names=["听听力","练阅读","做完型","攻翻译","背单词","万事皆宜","做真题","休息一下"];
+        var length=names.length;
+
+        //获取显示姓名的div对象
+        var displayBoard=document.getElementById("nameDisplay");
+
+        mytime = null
+
+        //点击开始，按钮变成停止字样、改变颜色，轮放姓名，点击停止，按钮变字和颜色，停止
+        function clickButton(btn){
+            //获取按钮上的文字
+            var text=btn.innerHTML;
+            console.log(text);
             
-            if(mytime != null){
-                clearInterval(mytime);
-                mytime = null;
+            //如果是开始按钮
+            if(text=="开始"){
+                btn.innerHTML="STOP!";
+                btn.style.backgroundColor="yellow";
+
+                if(mytime == null){
+                    mytime = setInterval(function(){
+                        var name=randomName();
+                        console.log(name);
+                        //轮放名字
+                        displayBoard.innerHTML=name;
+                    }, 50);
+                }
+
+            }else if(text=="STOP!"){
+                btn.innerHTML="开始";
+                btn.style.backgroundColor="palegreen";
+                
+                if(mytime != null){
+                    clearInterval(mytime);
+                    mytime = null;
+                }
             }
         }
-
-
-    }
-
-    function randomName(){
-        var randomNum=Math.ceil(Math.random()*10000)%length+1;
-        return names[randomNum-1];
-    }
-
-
-</script>
-</html>
-
-</body>
-</html>
-        
-  <div class="footer">
-    <h2>掐指一算，这次六级必过！</h2>
-  </div>
+        function randomName() {
+            var randomNum=Math.ceil(Math.random()*10000)%length+1;
+            return names[randomNum-1];
+        }
+        </script>
+    </body>
+    <div class="footer">
+        <p>掐指一算，这次六级必过！</p>
+    </div>
+</html> 
+  
